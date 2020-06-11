@@ -1,0 +1,20 @@
+{
+    "code": 11,
+    "result": [{
+            "id": "001",
+            "name": "zhangsan"
+        },
+        {
+            "id": "002",
+            "name": "lisi"
+        },
+        {
+            "id": "003",
+            "name": "wangwu"
+        },
+        {
+            "id": "004",
+            "name": "zhaoliu"
+        }
+    ]
+}

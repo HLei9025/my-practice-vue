@@ -1,13 +1,32 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router'
 import store from './store'
-import './registerServiceWorker'
+import router from './router'
+
+import AppScroll from './components/app-scroll'
+
+
+
+
+
+
+Vue.component(AppScroll.name,AppScroll)
+Vue.filter('capitalize', function(value){
+  if(!value) return ''
+  value = value.toString()
+  // return value.charAt(0).toUpperCase() + value.slice(1)
+  return value.substring(0,1).toUpperCase() + value.substring(1)
+})
 
 Vue.config.productionTip = false
 
+
+
 new Vue({
-  router,
   store,
-  render: h => h(App)
+  router,
+  render: h => h(App),
+  // created(){
+  //   console.log('store',store) // 有效。实例中可以直接用store访问
+  // }
 }).$mount('#app')
