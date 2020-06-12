@@ -5,6 +5,10 @@ Vue.use(VueRouter)
 
 const routes = [
     {
+        path: '/',
+        redirect: '/test1'
+    },
+    {
         path: '/test1',
         component: ()=>import('../pages/test1/Test1')
     },
@@ -23,6 +27,14 @@ const routes = [
     {
         path: '/test5',
         component: ()=>import('../pages/test5/Test5')
+    },
+    {
+        path: '/404',
+        component: ()=>import('../components/NotFind')
+    },
+    {
+        path: '*',
+        redirect: '/404'
     }
 ]
 
