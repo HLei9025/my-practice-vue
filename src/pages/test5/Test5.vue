@@ -39,7 +39,7 @@
 
 <script>
 // 按钮状态
-const mapBtnState = {
+const MAP_BTN_STATE = {
     0: 'All', // 0 表示全部
     1: 'Finished', // 1 表示已完成
     2: 'Unfinished' // 2 表示未完成
@@ -137,7 +137,7 @@ export default {
         },
         // 获得状态名
         getStateName(item){
-            return mapBtnState[item]
+            return MAP_BTN_STATE[item]
         },
 
         // 查找对应 id 所在的下标位置
