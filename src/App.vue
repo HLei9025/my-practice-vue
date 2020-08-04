@@ -3,15 +3,13 @@
         <!-- 所有路由入口的导航栏，横向滚动 -->
         <app-scroll class="content-x" :x="true" :y="false">
             <ul class="compo-wrap">
-                <router-link
-                    tag="li"
+                <li
                     class="compo-item"
                     v-for="item in compoList"
                     :key="item.id"
-                    :to="item.path"
                     :style="{background: item.color}"
-                    @click.native="sendName(item.name)"
-                >{{item.name}}</router-link>
+                    @click="sendName(item.title, item.name)"
+                >{{item.title}}</li>
             </ul>
         </app-scroll>
         <h2 class="accent">当前位置：{{accentName}}</h2>
@@ -24,11 +22,11 @@ export default {
     data() {
         return {
             compoList: [
-                { id: 1, path: "/test1", name: "test1" , color: this.getColor()},
-                { id: 2, path: "/test2", name: "test2" , color: this.getColor()},
-                { id: 3, path: "/test3", name: "test3" , color: this.getColor()},
-                { id: 4, path: "/test4", name: "test4" , color: this.getColor()},
-                { id: 5, path: "/test5", name: "test5" , color: this.getColor()}
+                { id: 1, name: "1", title: "test1" , color: this.getColor()},
+                { id: 2, name: "2", title: "test2" , color: this.getColor()},
+                { id: 3, name: "3", title: "test3" , color: this.getColor()},
+                { id: 4, name: "4", title: "test4" , color: this.getColor()},
+                { id: 5, name: "5", title: "test5" , color: this.getColor()}
             ],
             accentName: 'app'
         };
@@ -53,7 +51,7 @@ export default {
             let c = '#';
             for(let i = 0; i < 6; i++){
                 let randNum = this.getRand(cArr.length-1,0);
-                let str = cArr.find((m,n)=>n === randNum)
+                let str = cArr.find((item, index) => index === randNum)
                 c += str;
             }
             return c;
@@ -62,8 +60,9 @@ export default {
             return parseInt(Math.random()*(max-min+1)+min);
         },
         // 接收点击路由时的事件，知道点击的哪一个
-        sendName(name){
-            this.accentName = name;
+        sendName(title, name){
+            this.$router.push({name})
+            this.accentName = title;
         }
     }
 };
