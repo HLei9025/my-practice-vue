@@ -34,10 +34,17 @@
                 </div>
             </div>
         </div>
+        <div class="column-wrap">
+            <div class="column-text" v-for="item in columnList" :key="item.id">
+                <img :src="item.image" alt="">
+                <span>{{item.text}}</span>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 // 按钮状态
 const MAP_BTN_STATE = {
     0: 'All', // 0 表示全部
@@ -62,6 +69,9 @@ export default {
         }
     },
     computed: {
+        ...mapState({
+            columnList: state => state.columnList
+        }),
         showList(){ //【有‘查找’按钮时此计算属性注释掉，不需要用】
             let tempList = []
             switch(this.currentState){
@@ -80,6 +90,9 @@ export default {
         hasList(){
             return this.todoList.length > 0
         }
+    },
+    created(){
+        this.$store.dispatch('getColumnList')
     },
     methods: {
         // 添加事件
@@ -262,6 +275,17 @@ export default {
         }
         &:active{
             background: #093;
+        }
+    }
+}
+.column-wrap{
+    width: 100%;
+    column-count: 2;
+    column-span: none;
+    .column-text{
+        break-inside: avoid;
+        img{
+            width: 100%;
         }
     }
 }

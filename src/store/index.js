@@ -5,12 +5,16 @@ import axios from 'axios'
 Vue.use(Vuex)
 
 const state = {
-    listInfo:[]
+    listInfo:[],
+    columnList: []
 }
 
 const mutations = {
     saveListInfo(state, params){
         state.listInfo = params
+    },
+    saveColumnListData(state, params){
+        state.columnList = params
     }
 }
 
@@ -21,6 +25,11 @@ const actions = {
             console.log('result:',result)
             let data = result.data.result
             context.commit('saveListInfo', data)
+        })
+    },
+    getColumnList(context, params){
+        axios.get('/data/columnList.json').then(res=>{
+            context.commit('saveColumnListData', res.data.data)
         })
     }
 }
