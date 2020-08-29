@@ -5,7 +5,7 @@ module.exports = {
       favicon16: 'test.png',
       appleTouchIcon: 'test.png',
       maskIcon: 'test.png',
-      msTileImage: 'test.png'
-    }
-  }
+      msTileImage: 'test.png',
+    },
+  },
 }
