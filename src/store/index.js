@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 const state = {
   listInfo: [],
-  columnList: [],
+  columnList: []
 }
 
 const mutations = {
@@ -15,7 +15,7 @@ const mutations = {
   },
   saveColumnListData(state, params) {
     state.columnList = params
-  },
+  }
 }
 
 const actions = {
@@ -31,13 +31,13 @@ const actions = {
     axios.get('/data/columnList.json').then((res) => {
       context.commit('saveColumnListData', res.data.data)
     })
-  },
+  }
 }
 
 const store = new Vuex.Store({
   state,
   mutations,
-  actions,
+  actions
 })
 
 export default store

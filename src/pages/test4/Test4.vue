@@ -52,14 +52,14 @@ export default {
         { id: 1, txt: '我是第一条' },
         { id: 2, txt: '我是第二条' },
         { id: 3, txt: '我是第三条' },
-        { id: 4, txt: '我是第四条' },
+        { id: 4, txt: '我是第四条' }
       ],
       infoList: [
         { id: 1, info: 'I am first li' },
         { id: 2, info: 'I am second li' },
         { id: 3, info: 'I am thrid li' },
-        { id: 4, info: 'I am fourth li' },
-      ],
+        { id: 4, info: 'I am fourth li' }
+      ]
     }
   },
   methods: {
@@ -77,8 +77,8 @@ export default {
       this.demoList.splice(index, 1)
       console.log('this.demoList:', this.demoList)
     },
-    dome() {},
-  },
+    dome() {}
+  }
 }
 </script>
 

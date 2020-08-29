@@ -26,25 +26,25 @@ export default {
         {
           id: 1,
           src:
-            'https://p1.meituan.net/movie/967b253953bc7e660cfadbf9d78f67b62852693.jpg@160w_220h_1e_1c',
+            'https://p1.meituan.net/movie/967b253953bc7e660cfadbf9d78f67b62852693.jpg@160w_220h_1e_1c'
         },
         {
           id: 2,
           src:
-            'https://p1.meituan.net/moviemachine/f4df6f9c2c55e347266e35027da415251124290.jpg@160w_220h_1e_1c',
+            'https://p1.meituan.net/moviemachine/f4df6f9c2c55e347266e35027da415251124290.jpg@160w_220h_1e_1c'
         },
         {
           id: 3,
           src:
-            'https://p0.meituan.net/movie/4bfb08bfe0b8dd20776c6efc4015de6d995158.jpg@160w_220h_1e_1c',
-        },
+            'https://p0.meituan.net/movie/4bfb08bfe0b8dd20776c6efc4015de6d995158.jpg@160w_220h_1e_1c'
+        }
       ],
       count: 0,
       imgId: 0,
       iptId: 0,
       allData: {},
       abc: 0,
-      eee: 1,
+      eee: 1
     }
   },
   updated() {
@@ -61,7 +61,7 @@ export default {
         isIpt: true,
         isImg: false,
         iptValue: '',
-        iptId: this.iptId,
+        iptId: this.iptId
       })
     },
     addImgActive() {
@@ -77,7 +77,7 @@ export default {
         isIpt: false,
         isImg: true,
         src: src.src,
-        imgId: this.imgId,
+        imgId: this.imgId
       })
     },
     getData() {
@@ -93,7 +93,7 @@ export default {
         })
         let allData = {
           iptData,
-          imgData,
+          imgData
         }
         // console.log('allData:',allData)
 
@@ -103,8 +103,8 @@ export default {
       } else {
         alert('列表还未新增任何内容！')
       }
-    },
-  },
+    }
+  }
 }
 </script>
 

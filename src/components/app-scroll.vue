@@ -13,12 +13,12 @@ export default {
   props: {
     x: {
       type: Boolean,
-      default: false,
+      default: false
     },
     y: {
       type: Boolean,
-      default: true,
-    },
+      default: true
+    }
   },
   mounted() {
     console.log(this.x, this.y)
@@ -27,7 +27,7 @@ export default {
       click: true,
       tap: true,
       scrollX: this.x,
-      scrollY: this.y,
+      scrollY: this.y
     }))
     scroll.on('beforeScrollStart', () => {
       scroll.refresh()
@@ -36,8 +36,8 @@ export default {
   methods: {
     scrollTop() {
       this.scroll.scrollTo(0, 0, 0)
-    },
-  },
+    }
+  }
 }
 </script>
 

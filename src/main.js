@@ -23,7 +23,7 @@ Vue.config.productionTip = false
 new Vue({
   store,
   router,
-  render: (h) => h(App),
+  render: (h) => h(App)
   // created(){
   //   console.log('store',store) // 有效。实例中可以直接用store访问
   // }

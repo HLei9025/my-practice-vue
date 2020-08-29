@@ -70,7 +70,7 @@ import { mapState } from 'vuex'
 const MAP_BTN_STATE = {
   0: 'All', // 0 表示全部
   1: 'Finished', // 1 表示已完成
-  2: 'Unfinished', // 2 表示未完成
+  2: 'Unfinished' // 2 表示未完成
 }
 export default {
   name: 'test5',
@@ -86,12 +86,12 @@ export default {
       editId: null,
       showMask: false,
       btnState: [0, 1, 2],
-      currentState: 0,
+      currentState: 0
     }
   },
   computed: {
     ...mapState({
-      columnList: (state) => state.columnList,
+      columnList: (state) => state.columnList
     }),
     showList() {
       //【有‘查找’按钮时此计算属性注释掉，不需要用】
@@ -113,7 +113,7 @@ export default {
     },
     hasList() {
       return this.todoList.length > 0
-    },
+    }
   },
   created() {
     this.$store.dispatch('getColumnList')
@@ -125,7 +125,7 @@ export default {
       this.todoList.push({
         id: this.id,
         text: this.editContent,
-        finished: false,
+        finished: false
       })
       this.editContent = ''
       this.id++
@@ -142,7 +142,7 @@ export default {
       const index = this.findIdFromObjectArr(id, this.todoList)
       this.todoList.splice(index, 1, {
         ...this.todoList[index],
-        finished: true,
+        finished: true
       })
       // this.showList = this.todoList // 【有‘查找’按钮时需要解封此行代码】
     },
@@ -199,8 +199,8 @@ export default {
         }
       })
       return newArr
-    },
-  },
+    }
+  }
 }
 </script>
 

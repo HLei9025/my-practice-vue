@@ -17,15 +17,15 @@ export default {
   name: 'test2',
   computed: {
     ...mapState({
-      list: (state) => state.listInfo, // 可以直接用辅助函数获取全局的状态，转化为组件的计算属性
-    }),
+      list: (state) => state.listInfo // 可以直接用辅助函数获取全局的状态，转化为组件的计算属性
+    })
     // lists(){
     //     return this.$store.state.listInfo  // 用辅助函数或者直接这样用计算属性获取全局的状态
     // }
   },
   data() {
     return {
-      listItem: [],
+      listItem: []
     }
   },
   created() {
@@ -40,7 +40,7 @@ export default {
 
     // console.log('store::',store)// 报错。组件中要用this.$store访问
     console.log('this.$store', this.$store)
-  },
+  }
 }
 </script>
 

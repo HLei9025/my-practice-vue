@@ -20,7 +20,7 @@ export default {
   },
   data() {
     return {
-      msg: '',
+      msg: ''
     }
   },
   methods: {
@@ -42,8 +42,8 @@ export default {
     OneAndTwo() {
       this.one()
       this.two()
-    },
-  },
+    }
+  }
 }
 </script>
 

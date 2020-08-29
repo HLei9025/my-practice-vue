@@ -1,17 +1,17 @@
 module.exports = {
   root: true,
   env: {
-    node: true,
+    node: true
   },
   extends: [
     'plugin:vue/essential',
-    '@vue/prettier',
+    '@vue/prettier'
     // '@vue/standard'
     // prettier
   ],
   parserOptions: {
     parser: 'babel-eslint',
-    ecmaVersion: 8,
+    ecmaVersion: 8
   },
   rules: {
     'no-console': 'off',
@@ -20,14 +20,14 @@ module.exports = {
     'vue/no-use-v-if-with-v-for': [
       'error',
       {
-        allowUsingIterationVar: true,
-      },
+        allowUsingIterationVar: true
+      }
     ],
     'no-async-promise-executor': 0,
     'no-useless-escape': 0,
     'no-sparse-arrays': 0,
     'no-self-assign': 0,
     'no-unused-expressions': 0,
-    'no-duplicate-imports': 0,
-  },
+    'no-duplicate-imports': 0
+  }
 }

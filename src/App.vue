@@ -28,9 +28,9 @@ export default {
         { id: 2, name: '2', title: 'test2', color: this.getColor() },
         { id: 3, name: '3', title: 'test3', color: this.getColor() },
         { id: 4, name: '4', title: 'test4', color: this.getColor() },
-        { id: 5, name: '5', title: 'test5', color: this.getColor() },
+        { id: 5, name: '5', title: 'test5', color: this.getColor() }
       ],
-      accentName: 'app',
+      accentName: 'app'
     }
   },
   created() {
@@ -65,7 +65,7 @@ export default {
         'c',
         'd',
         'e',
-        'f',
+        'f'
       ]
       let c = '#'
       for (let i = 0; i < 6; i++) {
@@ -82,8 +82,8 @@ export default {
     sendName(title, name) {
       this.$router.push({ name })
       this.accentName = title
-    },
-  },
+    }
+  }
 }
 </script>
 
