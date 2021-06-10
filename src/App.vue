@@ -28,7 +28,8 @@ export default {
         { id: 2, name: '2', title: 'test2', color: this.getColor() },
         { id: 3, name: '3', title: 'test3', color: this.getColor() },
         { id: 4, name: '4', title: 'test4', color: this.getColor() },
-        { id: 5, name: '5', title: 'test5', color: this.getColor() }
+        { id: 5, name: '5', title: 'test5', color: this.getColor() },
+        { id: 6, name: '6', title: 'test6', color: this.getColor() }
       ],
       accentName: 'app'
     }

@@ -49,6 +49,14 @@ const routes = [
     }
   },
   {
+    path: '/test6',
+    name: '6',
+    component: () => import('../pages/test6'),
+    meta: {
+      title: 'test6'
+    }
+  },
+  {
     path: '/404',
     component: () => import('../components/NotFind'),
     meta: {
